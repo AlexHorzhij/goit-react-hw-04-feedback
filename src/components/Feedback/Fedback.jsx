@@ -40,7 +40,7 @@ export function Feedback() {
     }
 
     return <div className={css.feedback}><Section title="Please leave feedback">
-            <FeedbackOptions options={ ['good', 'neutral', 'bad'] } onLeaveFeedback={countFeedback} />
+            <FeedbackOptions options={ Object.keys({ good, neutral, bad }) } onLeaveFeedback={countFeedback} />
         </Section>
             <Section title="Statistics">
             {countTotalFeedback() ?
